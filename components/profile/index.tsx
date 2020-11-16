@@ -5,6 +5,7 @@ import {
   GithubOutlined,
   LinkedinOutlined,
   MailOutlined,
+  GitlabOutlined,
 } from '@ant-design/icons'
 // Styles
 import './styles.less'
@@ -13,26 +14,24 @@ const Profile: FC = () => {
   return (
     <div className="profile">
       <div className="profile__avatar">
-        <img src="https://i.pinimg.com/originals/69/6d/c3/696dc310d9b4e06cb460bcd4ef72331d.jpg" />
+        <img src="https://i.ibb.co/JdQHnVQ/me.png" alt="me" />
       </div>
-      <h2 className="profile__title">Pablo Coronel - Fullstack dev</h2>
+      <h2 className="profile__title">Pablo Coronel</h2>
       <article className="profile__description">
-        El Justicialismo ha dejado de ser la causa de un hombre para ser la
-        causa del pueblo, y por ella sí valdría la pena darlo todo, incluso la
-        vida Yo llevo en mis oídos la más maravillosa música, que, para mí, es
-        la palabra del pueblo argentino El Justicialismo necesita apóstoles y
-        para ser apóstol hay que estar dispuesto a ser héroe, y solamente los
-        fanáticos de amor por una causa son capaces de morir por un ideal
+        Desarrollador web fullstack.
       </article>
       <div className="profile__links">
-        <a href="#">
-          <LinkedinOutlined className="icon" />
+        <a href="https://www.linkedin.com/in/pablitxn/">
+          <LinkedinOutlined className="profile__anchor profile__anchor--linkedin" />
         </a>
-        <a href="#">
-          <GithubOutlined className="icon github-icon" />
+        <a href="https://github.com/pablitxn">
+          <GithubOutlined className="profile__anchor profile__anchor--github" />
         </a>
-        <a href="#">
-          <MailOutlined className="icon" />
+        <a href="mailto:me@pablitxn.io">
+          <MailOutlined className="profile__anchor profile__anchor--mail" />
+        </a>
+        <a href="https://gitlab.com/pablitxn">
+          <GitlabOutlined className="profile__anchor" />
         </a>
       </div>
     </div>

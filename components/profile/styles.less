@@ -5,7 +5,7 @@
     align-items: center;
 
     & img {
-      width: 20rem;
+      width: 15rem;
       border-radius: 100%;
     }
   }
@@ -17,7 +17,10 @@
   }
 
   &__description {
-    width: 40rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__links {
@@ -28,16 +31,28 @@
     & a {
       margin: 1rem;
     }
+    a:visited {
+      text-decoration: none;
+      color: black;
+    }
   }
-}
 
-.github-icon {
-  color: black;
-}
+  &__anchor {
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
 
-.icon {
-  svg {
-    width: 2rem;
-    height: 2rem;
+    &--github {
+      color: black;
+    }
+
+    &--mail {
+      color: black;
+    }
+
+    &--linkedin {
+      color: black;
+    }
   }
 }
