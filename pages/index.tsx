@@ -1,19 +1,32 @@
 // React
-import { FC, useState, useEffect } from 'react'
+import { FC, useState, useEffect, useCallback } from 'react'
 // Next
 import Head from 'next/head'
 // Components
-import Profile from '../components/profile'
+import Trail from '../components/animations/trail'
+// Router
+import { useRouter } from 'next/router'
 // Styles
 import './styles.less'
 
 const Home: FC = () => {
-  const [welcomeAnimation, setWelcomeAnimation] = useState(true)
+  const [openAnimation, setOpenAnimation] = useState(true)
+
+  const router = useRouter()
+  const goTo = useCallback(() => {
+    router.push('/me')
+  }, [])
+
+  const handleClickTrail = () => {
+    setOpenAnimation(false)
+    setTimeout(() => goTo(), 1000)
+  }
 
   useEffect(() => {
     setTimeout(() => {
-      setWelcomeAnimation((prev) => !prev)
-    }, 2500)
+      setOpenAnimation(false)
+      router.push('me')
+    }, 3000)
   }, [])
 
   return (
@@ -28,8 +41,10 @@ const Home: FC = () => {
         />
       </Head>
       <div className="home">
-        {welcomeAnimation && <h1>¡Hola!</h1>}
-        {!welcomeAnimation && <Profile />}
+        <Trail open={openAnimation} onClick={handleClickTrail}>
+          <span style={{ padding: '1rem' }}>¡Hola!</span>
+          <span style={{ padding: '1rem' }}>bienvenidx</span>
+        </Trail>
       </div>
     </>
   )

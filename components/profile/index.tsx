@@ -22,13 +22,13 @@ const Profile: FC = () => {
       </article>
       <div className="profile__links">
         <a href="https://www.linkedin.com/in/pablitxn/">
-          <LinkedinOutlined className="profile__anchor profile__anchor--linkedin" />
+          <LinkedinOutlined className="profile__anchor" />
         </a>
         <a href="https://github.com/pablitxn">
-          <GithubOutlined className="profile__anchor profile__anchor--github" />
+          <GithubOutlined className="profile__anchor" />
         </a>
         <a href="mailto:me@pablitxn.io">
-          <MailOutlined className="profile__anchor profile__anchor--mail" />
+          <MailOutlined className="profile__anchor" />
         </a>
         <a href="https://gitlab.com/pablitxn">
           <GitlabOutlined className="profile__anchor" />
