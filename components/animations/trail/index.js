@@ -19,7 +19,7 @@ function Trail({ open, children, ...props }) {
       <div>
         {trail.map(({ x, height, ...rest }, index) => (
           <a.div
-            key={items[index]}
+            key={index}
             className="trails-text"
             style={{
               ...rest,
