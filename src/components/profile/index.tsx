@@ -1,17 +1,28 @@
 import { FC } from "react"
+import { Flex, Text, Link, Image } from "@chakra-ui/react"
 
 const About: FC = () => {
   return (
-    <section className="get-in-touch">
-      <h2>Get in touch</h2>
-      <p>
-        If you have any questions, please feel free to contact me. I'm always
-        happy to help.
-      </p>
-      <a href="mailto:" className="button">
-        Contact me
-      </a>
-    </section>
+    <Flex>
+      <Flex gap={8} padding={4}>
+        <Image
+          src="https://aui.atlassian.com/aui/8.8/docs/images/avatar-person.svg"
+          alt="Pablo Coronel"
+          borderRadius="full"
+          boxSize="150px"
+        />
+        <Flex flexDir="column" justify="center">
+          <Text fontSize="1.5rem">
+            Hey, I'm Pablo. I'm a blockchain and fullstack developer.
+          </Text>
+          <Flex>
+            <Link href="">Github</Link>
+            <Link href="">LinkedIn</Link>
+            <Link href="">Mail To</Link>
+          </Flex>
+        </Flex>
+      </Flex>
+    </Flex>
   )
 }
 

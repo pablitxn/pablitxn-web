@@ -1,9 +1,9 @@
 export const useGetInTouch = () => {
   const handleGetInTouch = () => {}
-  const isInvalidEmail = true
+  const isValidEmail = true
 
   return {
     handleGetInTouch,
-    isInvalidEmail,
+    isValidEmail,
   }
 }

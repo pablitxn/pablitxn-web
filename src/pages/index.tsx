@@ -10,39 +10,51 @@ import {
 } from "@chakra-ui/react"
 import Profile from "components/profile"
 import About from "components/about"
-import GetInTouch from "components/get-in-touch"
+import GetInTouch from "components/contact-form"
 import { useGetInTouch } from "hooks/use-get-in-touch"
+import Footer from "components/footer"
 
 const Home: FC = () => {
-  const { handleGetInTouch, isInvalidEmail } = useGetInTouch()
+  const { handleGetInTouch, isValidEmail } = useGetInTouch()
 
   return (
-    <Flex justify="center" alignItems="center" p={8}>
+    <Flex
+      flexDir="column"
+      h="100vh"
+      justify="space-between"
+      alignItems="center"
+      p="3rem 2rem 0 2rem"
+    >
       <Tabs>
-        <Flex w={["120px", "480px", "720px"]} flexDir="row" justify="space-between">
+        <Flex
+          w={["120px", "480px", "720px"]}
+          flexDir="row"
+          justify="space-between"
+        >
           <Heading>Pablo Coronel</Heading>
           <TabList>
             <Tab>Profile</Tab>
             <Tab>About</Tab>
-            <Tab>Get in touch</Tab>
+            <Tab>Contact</Tab>
           </TabList>
         </Flex>
 
         <TabPanels>
-          <TabPanel w={["120px", "480px", "720px"]}>
+          <TabPanel p="2rem 0" w={["120px", "480px", "720px"]}>
             <Profile />
           </TabPanel>
-          <TabPanel w={["120px", "480px", "720px"]}>
+          <TabPanel p="2rem 0" w={["120px", "480px", "720px"]}>
             <About />
           </TabPanel>
-          <TabPanel w={["120px", "480px", "720px"]}>
+          <TabPanel p="2rem 0" w={["120px", "480px", "720px"]}>
             <GetInTouch
               onSubmit={handleGetInTouch}
-              isInvalidEmail={isInvalidEmail}
+              isValidEmail={isValidEmail}
             />
           </TabPanel>
         </TabPanels>
       </Tabs>
+      <Footer />
     </Flex>
   )
 }

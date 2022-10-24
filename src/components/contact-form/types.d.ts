@@ -1,10 +1,10 @@
-interface IGetInTouch {
+interface IContactForm {
   onSubmit: (values: GetInTouchFormValues) => void
-  isInvalidEmail: boolean
+  isValidEmail: boolean
 }
 
 type GetInTouchFormValues = {
-  name: string
+  subject: string
   email: string
   message: string
 }
