@@ -1,56 +1,56 @@
 import { FC } from "react"
-import {
-  Flex,
-  Tabs,
-  TabList,
-  TabPanels,
-  TabPanel,
-  Tab,
-  Heading,
-} from "@chakra-ui/react"
+import { Flex, Heading, Text } from "@chakra-ui/react"
+import { Tabs, TabList, TabPanels, TabPanel, Tab } from "@chakra-ui/react"
 import Profile from "components/profile"
 import About from "components/about"
-import GetInTouch from "components/contact-form"
-import { useGetInTouch } from "hooks/use-get-in-touch"
 import Footer from "components/footer"
 
 const Home: FC = () => {
-  const { handleGetInTouch, isValidEmail } = useGetInTouch()
-
   return (
     <Flex
       flexDir="column"
       h="100vh"
       justify="space-between"
       alignItems="center"
-      p="3rem 2rem 0 2rem"
+      p={["2rem 1rem 0 1rem", "2rem 1rem 0 1rem", "3rem 2rem 0 2rem"]}
+      fontFamily="IBM Plex Mono"
+      color="#a8adb2"
     >
-      <Tabs>
+      <Tabs variant="unstyled">
         <Flex
-          w={["120px", "480px", "720px"]}
+          w={["320px", "480px", "720px", "960px"]}
           flexDir="row"
           justify="space-between"
+          alignItems="center"
         >
-          <Heading>Pablo Coronel</Heading>
+          <Heading
+            fontFamily="IBM Plex Mono"
+            fontSize={["1rem", "1rem", "2rem", "2rem"]}
+          >
+            Pablo Coronel
+          </Heading>
           <TabList>
-            <Tab>Profile</Tab>
-            <Tab>About</Tab>
-            <Tab>Contact</Tab>
+            <Tab
+              borderBottom="3px solid transparent"
+              _selected={{ borderBottom: "3px solid gray" }}
+            >
+              <Text fontSize={[".85rem", ".85rem", "1rem"]}>Profile</Text>
+            </Tab>
+            <Tab
+              borderBottom="3px solid transparent"
+              _selected={{ borderBottom: "3px solid gray" }}
+            >
+              <Text fontSize={[".85rem", ".85rem", "1rem"]}>About</Text>
+            </Tab>
           </TabList>
         </Flex>
 
         <TabPanels>
-          <TabPanel p="2rem 0" w={["120px", "480px", "720px"]}>
+          <TabPanel w={["320px", "480px", "720px"]} p={["1rem 0", "2rem 0"]}>
             <Profile />
           </TabPanel>
-          <TabPanel p="2rem 0" w={["120px", "480px", "720px"]}>
+          <TabPanel w={["320px", "480px", "720px"]} p={["1rem 0", "2rem 0"]}>
             <About />
-          </TabPanel>
-          <TabPanel p="2rem 0" w={["120px", "480px", "720px"]}>
-            <GetInTouch
-              onSubmit={handleGetInTouch}
-              isValidEmail={isValidEmail}
-            />
           </TabPanel>
         </TabPanels>
       </Tabs>
