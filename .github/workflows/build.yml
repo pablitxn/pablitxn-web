@@ -1,7 +1,6 @@
-name: CI-Client
+name: build-client
 
-on:
-  push: "*"
+on: [push]
 
 jobs:
   build-client:
