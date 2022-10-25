@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": ["plugin:@next/next/recommended"],
+  "rules": {},
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx"],
+        "paths": ["."]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser"
+}
