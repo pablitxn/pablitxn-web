@@ -1,9 +1,9 @@
-import { FC } from "react"
-import { Flex, Heading, Text } from "@chakra-ui/react"
-import { Tabs, TabList, TabPanels, TabPanel, Tab } from "@chakra-ui/react"
-import Profile from "components/profile"
-import About from "components/about"
-import Footer from "components/footer"
+import { FC } from "react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Tabs, TabList, TabPanels, TabPanel, Tab } from "@chakra-ui/react";
+import Profile from "components/profile";
+import About from "components/about";
+import Footer from "components/footer";
 
 const Home: FC = () => {
   return (
@@ -23,24 +23,19 @@ const Home: FC = () => {
           justify="space-between"
           alignItems="center"
         >
-          <Heading
-            fontFamily="IBM Plex Mono"
-            fontSize={["1rem", "1rem", "2rem", "2rem"]}
-          >
-            Pablo Coronel
-          </Heading>
+          <Heading fontFamily="IBM Plex Mono">Pablo Coronel</Heading>
           <TabList>
             <Tab
               borderBottom="3px solid transparent"
               _selected={{ borderBottom: "3px solid gray" }}
             >
-              <Text fontSize={[".85rem", ".85rem", "1rem"]}>Profile</Text>
+              <Text>Profile</Text>
             </Tab>
             <Tab
               borderBottom="3px solid transparent"
               _selected={{ borderBottom: "3px solid gray" }}
             >
-              <Text fontSize={[".85rem", ".85rem", "1rem"]}>About</Text>
+              <Text>About</Text>
             </Tab>
           </TabList>
         </Flex>
@@ -56,7 +51,7 @@ const Home: FC = () => {
       </Tabs>
       <Footer />
     </Flex>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
