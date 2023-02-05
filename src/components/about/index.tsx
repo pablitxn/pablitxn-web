@@ -3,34 +3,21 @@ import { Flex, Heading, Text } from "@chakra-ui/react";
 
 const About: FC = () => (
   <Flex flexDir="column" gap={4} w={["", "", "70vw"]}>
-    <Heading fontFamily="IBM Plex Mono" as="h2" fontSize="1.5rem">
-      Hey, I'm Pablo 👋🏼
+    <Heading fontFamily="IBM Plex Mono" as="h3" fontSize="1.25rem">
+      My experience
     </Heading>
     <Text fontFamily="IBM Plex Mono">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      I'm a highly skilled software engineer with 5 years of experience in the industry. My focus
+      has been on developing cutting-edge applications utilizing web 3 technologies.
     </Text>
 
     <Heading fontFamily="IBM Plex Mono" as="h3" fontSize="1.25rem">
-      TITLE 1
+      Skills
     </Heading>
     <Text fontFamily="IBM Plex Mono">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </Text>
-    <Heading fontFamily="IBM Plex Mono" as="h3" fontSize="1.25rem">
-      TITLE 2
-    </Heading>
-    <Text fontFamily="IBM Plex Mono">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat.
+      I'm a technical professional with expertise in a range of cutting-edge technologies. My skill
+      set includes proficiency in TypeScript, Solidity, Web3, ReactJS, GitOps CI/CD, Docker,
+      GraphQL, PostgreSQL, MongoDB, Express.js, Next.js, and Foundry.
     </Text>
   </Flex>
 );

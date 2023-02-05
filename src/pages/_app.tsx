@@ -1,7 +1,6 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Box, ChakraProvider, Container, Flex } from "@chakra-ui/react";
-import Footer from "components/footer";
 import theme from "theme";
 
 const App = ({ Component, pageProps }: AppProps) => (
@@ -15,7 +14,6 @@ const App = ({ Component, pageProps }: AppProps) => (
         <Box flex={1}>
           <Component {...pageProps} />
         </Box>
-        <Footer />
       </Flex>
     </Container>
   </ChakraProvider>

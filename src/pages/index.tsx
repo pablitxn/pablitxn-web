@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Flex, Box, Text, Tabs, TabList, TabPanels, TabPanel, Tab } from "@chakra-ui/react";
+import { Flex, Text, Tabs, TabList, TabPanels, TabPanel, Tab } from "@chakra-ui/react";
 import Profile from "components/profile";
 import About from "components/about";
 
@@ -23,7 +23,7 @@ const Home: FC = () => {
             </Flex>
           </TabPanel>
           <TabPanel p={["1rem 0", "2rem 0"]}>
-            <Flex justify="start">
+            <Flex justify="start" maxW={["", "", "", "50vw"]}>
               <About />
             </Flex>
           </TabPanel>
