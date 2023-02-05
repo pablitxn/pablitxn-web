@@ -1,15 +1,26 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { ChakraProvider, Container } from "@chakra-ui/react";
+import { Box, ChakraProvider, Container, Flex } from "@chakra-ui/react";
+import Footer from "components/footer";
+import theme from "theme";
 
 const App = ({ Component, pageProps }: AppProps) => (
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
     <Head>
       <title>Pablo Coronel</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     </Head>
-    <Container bg="#0c0f11" minH="100vh" maxW="100%" p={0} m={0}>
-      <Component {...pageProps} />
+    <Container minH="100vh" maxW="100%" p={0} m={0}>
+      <Flex minH="100vh" flexDir="column">
+        <Box flex={1}>
+          <Component {...pageProps} />
+        </Box>
+        <Flex w="100%" justify="center" pb={4}>
+          <Box w="60vw">
+            <Footer />
+          </Box>
+        </Flex>
+      </Flex>
     </Container>
   </ChakraProvider>
 );
