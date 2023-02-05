@@ -5,10 +5,10 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Profile: FC = () => (
   <Flex gap={[4, 8]} flexDir="column" padding={[0, 4]} pt={4}>
-    <Flex gap={[4, 8]} pb={[4, 8]}>
+    <Flex gap={6} pb={4}>
       <Avatar
         src="https://avatars.githubusercontent.com/u/39420001?s=400&u=f8f520a8d724d0e03bc38d3f643bfa7468c87080&v=4"
-        filter="brightness(70%) contrast(100%)"
+        filter="brightness(65%) contrast(100%)"
         name="Pablo Coronel"
         size="2xl"
       />
@@ -19,7 +19,7 @@ const Profile: FC = () => (
       </Flex>
     </Flex>
 
-    <Flex gap={[4, 8]}>
+    <Flex gap={8}>
       <Link href="https://github.com/pablitxn">
         <HStack>
           <FaGithub />
