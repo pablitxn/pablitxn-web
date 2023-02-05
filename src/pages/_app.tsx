@@ -15,11 +15,7 @@ const App = ({ Component, pageProps }: AppProps) => (
         <Box flex={1}>
           <Component {...pageProps} />
         </Box>
-        <Flex w="100%" justify="center" pb={4}>
-          <Box w="60vw">
-            <Footer />
-          </Box>
-        </Flex>
+        <Footer />
       </Flex>
     </Container>
   </ChakraProvider>

@@ -5,46 +5,29 @@ import About from "components/about";
 
 const Home: FC = () => {
   return (
-    <Flex
-      flexDir="column"
-      justify="space-between"
-      alignItems="center"
-      fontFamily="IBM Plex Mono"
-      color="#a8adb2"
-      p={8}
-    >
+    <Flex fontFamily="IBM Plex Mono" color="#a8adb2" p={8}>
       <Tabs variant="unstyled">
-        <Flex flexDir="row" justify="end">
-          <TabList>
-            <Tab
-              borderBottom="3px solid transparent"
-              _selected={{ borderBottom: "3px solid gray" }}
-            >
-              <Text>Profile</Text>
-            </Tab>
-            <Tab
-              borderBottom="3px solid transparent"
-              _selected={{ borderBottom: "3px solid gray" }}
-            >
-              <Text>About</Text>
-            </Tab>
-          </TabList>
-        </Flex>
+        <TabList>
+          <Tab borderBottom="3px solid transparent" _selected={{ borderBottom: "3px solid gray" }}>
+            <Text>Profile</Text>
+          </Tab>
+          <Tab borderBottom="3px solid transparent" _selected={{ borderBottom: "3px solid gray" }}>
+            <Text>About</Text>
+          </Tab>
+        </TabList>
 
-        <Box width="60vw" p={8}>
-          <TabPanels>
-            <TabPanel p={["1rem 0", "2rem 0"]}>
-              <Flex justify="start">
-                <Profile />
-              </Flex>
-            </TabPanel>
-            <TabPanel p={["1rem 0", "2rem 0"]}>
-              <Flex justify="start">
-                <About />
-              </Flex>
-            </TabPanel>
-          </TabPanels>
-        </Box>
+        <TabPanels maxW="100vw">
+          <TabPanel p={["1rem 0", "2rem 0"]}>
+            <Flex justify="start">
+              <Profile />
+            </Flex>
+          </TabPanel>
+          <TabPanel p={["1rem 0", "2rem 0"]}>
+            <Flex justify="start">
+              <About />
+            </Flex>
+          </TabPanel>
+        </TabPanels>
       </Tabs>
     </Flex>
   );
